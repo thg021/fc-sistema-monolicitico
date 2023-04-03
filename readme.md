@@ -83,3 +83,19 @@ export default {
 }
 
 ```
+
+---
+
+[x] - Configuracao do tslint. Criar arquivo `tslint.json`
+
+```json
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": []
+}
+``` 
