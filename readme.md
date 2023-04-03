@@ -60,3 +60,26 @@ export default {
 ```
 
 ---
+[x] - Configuracao do typescript. Criar o arquivo `tsconfig.json`
+
+```json
+{
+  "compilerOptions": {
+    "incremental": true,                             
+    "target": "es2020",                                 
+    "experimentalDecorators": true,                  
+    "emitDecoratorMetadata": true,                   
+    "module": "commonjs",                               
+    "outDir": "./dist",                                  
+    "esModuleInterop": true,                            
+    "forceConsistentCasingInFileNames": true,           
+    "strict": true,                                     
+    "strictNullChecks": false,                        
+    "skipLibCheck": true                                
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+}
+
+```
