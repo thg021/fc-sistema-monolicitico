@@ -41,5 +41,22 @@ export default {
 ``` 
 ---
 
-[x] - Configuração do swc
+[x] - Configuração do swc. Criar o arquivo `.swcrc`
 
+```
+{
+    "jsc" : {
+        "parser": {
+            "syntax": "typescript",
+            "decorators": true
+        },
+        "transform": {
+            "legacyDecorator": true,
+            "decoratorMetadata": true
+        }
+    }
+}
+
+```
+
+---
