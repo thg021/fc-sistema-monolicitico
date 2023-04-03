@@ -99,3 +99,6 @@ export default {
     "rulesDirectory": []
 }
 ``` 
+
+---
+[x] - Criar a pasta `src/modules`
