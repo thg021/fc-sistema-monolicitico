@@ -102,3 +102,11 @@ export default {
 
 ---
 [x] - Criar a pasta `src/modules`
+[x] - Adicionar algums scripts no package.json
+
+```json
+"scripts": {
+    "test": "npm run tsc -- --noEmit && jest",
+    "tsc": "tsc",
+  }
+```
