@@ -112,6 +112,15 @@ export default {
 ```
 
 ---
-[]- criar pasta `@shared/domain/entity/aggregate-root-interface.ts`
-[ ] - Leitura: (Aggregate Root)[https://renatogontijo.medium.com/aggregate-root-na-modelagem-de-dom%C3%ADnios-ricos-7317238e6d97]
-[ ] - Criar `base.entity.ts`
+
+Leitura: (Aggregate Root)[https://renatogontijo.medium.com/aggregate-root-na-modelagem-de-dom%C3%ADnios-ricos-7317238e6d97]
+
+--- 
+
+# banco de dados 
+
+[ ] - Instalar o sequelize 
+
+```bash 
+npm install sequelize sequelize-typescript sqlite3
+```
