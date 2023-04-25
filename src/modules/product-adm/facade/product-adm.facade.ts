@@ -6,13 +6,19 @@ import ProductAdmFacadeInterface, {
 } from "./product-adm.facade.interface";
 
 export interface UseCaseProps {
-  addUseCase: UseCaseInterface;
-  stockUseCase: UseCaseInterface;
+  addUseCase: UseCaseInterface<AddProductFacadeInputDto, any>;
+  stockUseCase: UseCaseInterface<
+    CheckStockFacadeInputDto,
+    CheckStockFacadeOutputDto
+  >;
 }
 
 export default class ProductAdmFacade implements ProductAdmFacadeInterface {
-  #addUseCase: UseCaseInterface;
-  #checkStockUseCase: UseCaseInterface;
+  #addUseCase: UseCaseInterface<AddProductFacadeInputDto, any>;
+  #checkStockUseCase: UseCaseInterface<
+    CheckStockFacadeInputDto,
+    CheckStockFacadeOutputDto
+  >;
 
   constructor(usecaseProps: UseCaseProps) {
     this.#addUseCase = usecaseProps.addUseCase;

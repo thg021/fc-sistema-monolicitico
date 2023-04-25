@@ -1,9 +1,12 @@
 import Id from "../../../@shared/domain/value-object/id.value-object";
+import UseCaseInterface from "../../../@shared/usecase/use-case.interface";
 import Product from "../../domain/product.entity";
 import ProductGateway from "../../gateway/product.gateway";
 import { AddProductInputDto, AddProductOutputDto } from "./add-product.dto";
 
-export default class AddProductUseCase {
+export default class AddProductUseCase
+  implements UseCaseInterface<AddProductInputDto, AddProductOutputDto>
+{
   #productRepository: ProductGateway;
   constructor(productRepository: ProductGateway) {
     this.#productRepository = productRepository;

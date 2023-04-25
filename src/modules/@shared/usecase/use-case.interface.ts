@@ -1,3 +1,3 @@
-export default interface UseCaseInterface<T = any> {
-  execute(input: T): Promise<T>;
+export default interface UseCaseInterface<T = any, R = void> {
+  execute(input: T): Promise<R>;
 }

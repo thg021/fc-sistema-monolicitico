@@ -2,7 +2,9 @@ import UseCaseInterface from "../../../@shared/usecase/use-case.interface";
 import { IProductGateway } from "../../gateway/product.gateway";
 import { IProducts } from "./find-all-products.dto";
 
-export default class FindAllProductsUsecase implements UseCaseInterface {
+export default class FindAllProductsUsecase
+  implements UseCaseInterface<any, IProducts>
+{
   #productRepository: IProductGateway;
 
   constructor(productRepository: IProductGateway) {
