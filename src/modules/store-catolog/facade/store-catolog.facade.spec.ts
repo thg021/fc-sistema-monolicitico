@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize-typescript";
 import { ProductModel } from "../repository/product.model";
 import StoryCatalogFacadeFactory from "../factory/facade.factory";
 
-describe("ProductAdmFacade test", () => {
+describe("storeCatalog test", () => {
   let sequelize: Sequelize;
 
   beforeEach(async () => {
@@ -22,7 +22,7 @@ describe("ProductAdmFacade test", () => {
   });
 
   it("should find a product", async () => {
-    const productAdmFacade = StoryCatalogFacadeFactory.create();
+    const storeCatalog = StoryCatalogFacadeFactory.create();
     const input = {
       id: "1",
       name: "Product 1",
@@ -32,7 +32,7 @@ describe("ProductAdmFacade test", () => {
 
     await ProductModel.create(input);
 
-    await productAdmFacade.find(input);
+    await storeCatalog.find(input);
     const product = await ProductModel.findOne({ where: { id: input.id } });
     expect(product).toBeDefined();
     expect(product.id).toBe(input.id);
@@ -41,7 +41,7 @@ describe("ProductAdmFacade test", () => {
   });
 
   it("should find all products", async () => {
-    const productAdmFacade = StoryCatalogFacadeFactory.create();
+    const storeCatalog = StoryCatalogFacadeFactory.create();
     const product1 = {
       id: "1",
       name: "Product 1",
@@ -58,7 +58,7 @@ describe("ProductAdmFacade test", () => {
     await ProductModel.create(product1);
     await ProductModel.create(product2);
 
-    const { products } = await productAdmFacade.findAll();
+    const { products } = await storeCatalog.findAll();
     expect(products.length).toBe(2);
     expect(products[0].id).toBe(product1.id);
     expect(products[0].name).toBe(product1.name);
