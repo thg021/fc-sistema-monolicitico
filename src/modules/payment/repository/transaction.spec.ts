@@ -32,8 +32,6 @@ describe("Product Repository test", () => {
     transaction.approve();
     const result = await transactionRepository.save(transaction);
 
-    console.log(transaction.status);
-
     expect(transaction.id.id).toBe(result.id.id);
     expect(transaction.amount).toBe(result.amount);
     expect(transaction.status).toBe(result.status);
