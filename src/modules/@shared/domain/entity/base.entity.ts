@@ -2,13 +2,13 @@ import Id from "../value-object/id.value-object";
 
 export default class BaseEntity {
   #id: Id;
-  #created_at: Date;
-  #updated_at: Date;
+  #createdAt: Date;
+  #updatedAt: Date;
 
   constructor(id?: Id, createdAt?: Date, updatedAt?: Date) {
     this.#id = id || new Id();
-    this.#created_at = new Date() || createdAt;
-    this.#updated_at = new Date() || updatedAt;
+    this.#createdAt = new Date() || createdAt;
+    this.#updatedAt = new Date() || updatedAt;
   }
 
   get id(): Id {
@@ -16,9 +16,9 @@ export default class BaseEntity {
   }
 
   get createdAt(): Date {
-    return this.#created_at;
+    return this.#createdAt;
   }
   get updatedAt(): Date {
-    return this.#updated_at;
+    return this.#updatedAt;
   }
 }
