@@ -1,4 +1,4 @@
-export type IStoreCatalog = {
+type IStoreCatalog = {
   id: string;
   name: string;
   description: string;
